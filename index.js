@@ -9,4 +9,21 @@ function getComputerChoice() {
     }
 }
 
-getComputerChoice();
+
+function playRound(playerSelection, computerSelection) {
+    playerSelection = "roCk";
+    computerSelection = getComputerChoice();
+
+    if(playerSelection.toLowerCase() === computerSelection) {
+        return "It's a tie!";
+    }
+    if(playerSelection.toLowerCase() === "rock") {
+        if (computerSelection === "scissors") {
+            return "You won!";
+        } else if (computerSelection === "paper") {
+            return "The computer has won!";
+        }
+    } else {
+        return "error";
+    }
+}
